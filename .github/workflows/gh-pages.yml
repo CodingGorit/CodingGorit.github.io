@@ -37,7 +37,7 @@ jobs:
       # 3. 构建静态站点（带清理）
       # --------------------------
       - name: Build with Hugo
-        run: hugo --minify
+        run: hugo --minify --cleanDestinationDir  # 清理目标目录
 
       # --------------------------
       # 4. 部署到 GitHub Pages
@@ -47,6 +47,7 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}  # 使用 GITHUB_TOKEN
           publish_dir: ./public
+          force_orphan: true  # 强制清空目标分支历史
           enable_jekyll: false   # 禁用 Jekyll 处理
           keep_files: false      # 不保留旧文件
           commit_message: "Hugo Deployed: ${{ github.sha }}"
