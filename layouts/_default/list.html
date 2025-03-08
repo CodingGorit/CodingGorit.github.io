@@ -1,0 +1,24 @@
+{{ define "title" }}{{ .Title }} | {{ .Site.Title }}{{ end }}
+{{ define "main" }}
+<div class="content-wrapper">
+    <h1>{{ .Title }}</h1>
+    {{ .Content }}
+    <ul class="post-list">
+        {{ range .Pages }}
+        <li>
+            <a href="{{ .Permalink }}">{{ .Title }}</a>
+            <time>{{ .Date.Format "2006-01-02" }}</time>
+            <p>{{ .Summary }}</p>
+            {{ if .Truncated }}
+            <a href="{{ .Permalink }}" class="btn">阅读更多</a>
+            {{ end }}
+        </li>
+        {{ else }}
+        <li>暂无文章</li>
+        {{ end }}
+    </ul>
+</div>
+{{ end }}
+
+
+

@@ -1,0 +1,152 @@
+<!--
+Created Date: Saturday, March 8th 2025, 5:14:48 pm
+Author: CodingGorit
+Contact: javafullstack2021@163.com
+-----
+Last Modified: Sat Mar 08 2025
+Modified By: CodingGorit
+-----
+Copyright © 2019 —— 2025 fmin-courses.com All Rights Reserved
+------------------------------------
+Hello World
+-->
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>{{ .Site.Title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{ .Site.Params.description }}">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap">
+</head>
+
+<body>
+    <div id="particles-js"></div>
+    <header>
+        <div class="container">
+            <h1>{{ .Site.Title }}</h1>
+            <nav>
+                {{ range .Site.Menus.main }}
+                <a href="{{ .URL }}">{{ .Name }}</a>
+                {{ end }}
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+
+            <div class="content-wrapper">
+                {{ .Content }}
+
+                <h2>最新文章</h2>
+                <ul class="post-list">
+                    {{ $paginator := .Paginate (where .Site.RegularPages "Type" "in" (slice "posts" "articles")) }}
+                    {{ range $paginator.Pages }}
+                    <li>
+                        <a href="{{ .Permalink }}">{{ .Title }}</a>
+                        <time>{{ .Date.Format "2006-01-02" }}</time>
+                        <p>{{ .Summary }}</p>
+                        {{ if .Truncated }}
+                        <a href="{{ .Permalink }}" class="btn">阅读更多</a>
+                        {{ end }}
+                    </li>
+                    {{ else }}
+                    <li>暂无文章</li>
+                    {{ end }}
+                </ul>
+
+                {{ template "_internal/pagination.html" . }}
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; {{ now.Format "2006" }} {{ .Site.Title }}</p>
+    </footer>
+
+    <!-- 粒子效果 JS -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            particlesJS('particles-js', {
+                "particles": {
+                    "number": {
+                        "value": 80,
+                        "density": {
+                            "enable": true,
+                            "value_area": 800
+                        }
+                    },
+                    "color": {
+                        "value": "#3498db"
+                    },
+                    "shape": {
+                        "type": "circle",
+                        "stroke": {
+                            "width": 0,
+                            "color": "#000000"
+                        },
+                    },
+                    "opacity": {
+                        "value": 0.5,
+                        "random": false,
+                    },
+                    "size": {
+                        "value": 3,
+                        "random": true,
+                    },
+                    "line_linked": {
+                        "enable": true,
+                        "distance": 150,
+                        "color": "#2c3e50",
+                        "opacity": 0.4,
+                        "width": 1
+                    },
+                    "move": {
+                        "enable": true,
+                        "speed": 2,
+                        "direction": "none",
+                        "random": false,
+                        "straight": false,
+                        "out_mode": "out",
+                        "bounce": false,
+                    }
+                },
+                "interactivity": {
+                    "detect_on": "canvas",
+                    "events": {
+                        "onhover": {
+                            "enable": true,
+                            "mode": "grab"
+                        },
+                        "onclick": {
+                            "enable": true,
+                            "mode": "push"
+                        },
+                        "resize": true
+                    },
+                    "modes": {
+                        "grab": {
+                            "distance": 140,
+                            "line_linked": {
+                                "opacity": 1
+                            }
+                        },
+                        "push": {
+                            "particles_nb": 4
+                        },
+                    }
+                },
+                "retina_detect": true
+            });
+        });
+    </script>
+</body>
+
+</html>

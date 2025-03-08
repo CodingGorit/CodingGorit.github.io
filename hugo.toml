@@ -1,0 +1,22 @@
+baseURL = "http://example.com"
+languageCode = 'en-us'
+title = 'Gorit 的个人博客'
+
+# 如果您已经安装了主题，取消下面这行的注释并填入主题名称
+# theme = "主题名称"
+
+# 添加一些基本配置
+[params]
+  description = "Gorit 的个人博客"
+  author = "Gorit"
+
+# 菜单配置
+[menu]
+  [[menu.main]]
+    name = "首页"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "文章"
+    url = "/articles/"
+    weight = 2
