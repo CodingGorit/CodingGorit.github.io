@@ -1,12 +1,13 @@
 +++
 date = '2025-03-08T22:44:05+08:00'
-draft = true
+draft = false
 title = 'How Do Programmers Develop Product Thinking'
 +++
 
 作为程序员提升产品思维，可以遵循以下体系化的方法，将技术视角与用户需求、商业价值深度融合：
 
 ### 一、建立产品认知框架
+
 1. 理解产品闭环
 + 学习AARRR模型（获客-激活-留存-收入-推荐）
 + 掌握用户生命周期管理（从首次接触到流失预警）
@@ -19,8 +20,8 @@ title = 'How Do Programmers Develop Product Thinking'
 ![](https://cdn.nlark.com/yuque/0/2025/png/473179/1740067600030-76808bc4-a0e7-4794-af39-4db8c8c102ae.png)
 
 
-
 ### 二、技术视角的产品化训练
+
 1. 代码即产品
 + 在开发功能前自问：
     - 这个API会被如何滥用？（安全视角）
@@ -35,6 +36,7 @@ title = 'How Do Programmers Develop Product Thinking'
     - 通过归因分析优化技术投入优先级
 
 ### 三、深度参与产品过程
+
 1. 需求四维分析法
 + 业务维度：是否符合公司战略
 + 用户维度：解决什么场景问题
@@ -62,6 +64,7 @@ title = 'How Do Programmers Develop Product Thinking'
 + 构建用户分群模型（RFM模型技术实现）
 
 ### 五、产品化技术方案
+
 1. 技术方案说明书升级
 + 增加"商业影响评估"章节
 + 绘制技术方案与用户旅程的映射图
@@ -76,6 +79,7 @@ title = 'How Do Programmers Develop Product Thinking'
 
 
 ### 六、培养商业敏感度
+
 1. 财务指标技术解读
 + 理解LTV/CAC在代码层的体现
 + 用技术手段优化服务成本结构
