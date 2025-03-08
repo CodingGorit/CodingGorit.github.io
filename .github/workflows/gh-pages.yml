@@ -11,8 +11,18 @@ on:
       # - 'hugo.toml'  # 配置文件变动时触发
 
 jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Build
+        run: echo "Running build task..."
+
   deploy:
     runs-on: ubuntu-latest
+    needs: build  # 依赖 build 任务
     permissions:
       contents: write  # 确保有写入权限
       pages: write      # 专门针对 GitHub Pages 的权限
