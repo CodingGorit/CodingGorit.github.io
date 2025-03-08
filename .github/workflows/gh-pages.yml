@@ -34,15 +34,17 @@ jobs:
           hugo-version: 'latest'  # 使用最新版本
           extended: true          # 如果使用扩展版本，设置为 true
 
+      - name: Clean workspace
+          git clean -fdx
+          rm -rf public
       # --------------------------
       # 3. 构建静态站点（带清理）
       # --------------------------
       - name: Build with Hugo
         run: |
-          hugo \
-            --minify \           # 压缩 HTML/CSS/JS
-            --cleanDestinationDir \  # 清理旧文件
-            --gc              # 移除未用缓存
+          hugo --minify           # 压缩 HTML/CSS/JS
+          hugo --cleanDestinationDir  # 清理旧文件
+          hugo --gc              # 移除未用缓存
 
       # --------------------------
       # 4. 部署到 GitHub Pages
