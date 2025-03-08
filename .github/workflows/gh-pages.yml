@@ -16,7 +16,8 @@ jobs:
     permissions:
       contents: write  # 确保有写入权限
       pages: write      # 专门针对 GitHub Pages 的权限
-      id-token: read    # OIDC 令牌读取权限（未来兼容）
+
+
     steps:
       # --------------------------
       # 1. 检出代码（含子模块）
