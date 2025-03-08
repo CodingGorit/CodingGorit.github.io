@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Articles on Gorit 的个人博客</title><link>http://blog.gorit.cn/articles/</link><description>Recent content in Articles on Gorit 的个人博客</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sat, 08 Mar 2025 22:44:05 +0800</lastBuildDate><atom:link href="http://blog.gorit.cn/articles/index.xml" rel="self" type="application/rss+xml"/><item><title>How Do Programmers Develop Product Thinking</title><link>http://blog.gorit.cn/articles/how-do-programmers-develop-product-thinking/</link><pubDate>Sat, 08 Mar 2025 22:44:05 +0800</pubDate><guid>http://blog.gorit.cn/articles/how-do-programmers-develop-product-thinking/</guid><description>&lt;p>作为程序员提升产品思维，可以遵循以下体系化的方法，将技术视角与用户需求、商业价值深度融合：&lt;/p>
+&lt;h3 id="一建立产品认知框架">一、建立产品认知框架&lt;/h3>
+&lt;ol>
+&lt;li>理解产品闭环&lt;/li>
+&lt;/ol>
+&lt;ul>
+&lt;li>学习AARRR模型（获客-激活-留存-收入-推荐）&lt;/li>
+&lt;li>掌握用户生命周期管理（从首次接触到流失预警）&lt;/li>
+&lt;li>绘制产品价值流地图，理解功能与商业目标的关联&lt;/li>
+&lt;/ul>
+&lt;ol start="2">
+&lt;li>掌握核心思维工具&lt;/li>
+&lt;/ol>
+&lt;ul>
+&lt;li>Jobs-to-be-done（用户任务理论）：不是思考如何优化登录流程，而是思考&amp;quot;用户为什么需要登录&amp;quot;&lt;/li>
+&lt;li>用户故事地图：用技术可实现性反推功能优先级&lt;/li>
+&lt;li>Kano模型：区分基本需求、期望型需求和兴奋型需求&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://cdn.nlark.com/yuque/0/2025/png/473179/1740067600030-76808bc4-a0e7-4794-af39-4db8c8c102ae.png" alt="">&lt;/p>
+&lt;h3 id="二技术视角的产品化训练">二、技术视角的产品化训练&lt;/h3>
+&lt;ol>
+&lt;li>代码即产品&lt;/li>
+&lt;/ol>
+&lt;ul>
+&lt;li>在开发功能前自问：
+&lt;ul>
+&lt;li>这个API会被如何滥用？（安全视角）&lt;/li>
+&lt;li>接口设计是否符合未来扩展需求？&lt;/li>
+&lt;li>日志埋点是否覆盖关键用户路径？&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;ol start="2">
+&lt;li>数据思维产品化&lt;/li>
+&lt;/ol>
+&lt;ul>
+&lt;li>建立数据仪表盘开发规范：
+&lt;ul>
+&lt;li>核心指标（如DAU）的波动归因策略&lt;/li>
+&lt;li>构建可解释的指标树（指标拆解到可执行层面）&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>实践因果推断：
+&lt;ul>
+&lt;li>用A/B测试验证技术方案对业务指标的影响&lt;/li>
+&lt;li>通过归因分析优化技术投入优先级&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="三深度参与产品过程">三、深度参与产品过程&lt;/h3>
+&lt;ol>
+&lt;li>需求四维分析法&lt;/li>
+&lt;/ol>
+&lt;ul>
+&lt;li>业务维度：是否符合公司战略&lt;/li>
+&lt;li>用户维度：解决什么场景问题&lt;/li>
+&lt;li>数据维度：预期提升什么指标&lt;/li>
+&lt;li>技术维度：ROI是否合理&lt;/li>
+&lt;/ul>
+&lt;ol start="2">
+&lt;li>技术评审升级&lt;/li>
+&lt;/ol>
+&lt;ul>
+&lt;li>常规问题升级：
+&lt;ul>
+&lt;li>原问题：&amp;ldquo;这个需求技术实现难度大&amp;rdquo;&lt;/li>
+&lt;li>升级问：&amp;ldquo;这个功能对北极星指标的贡献是否值得投入&amp;rdquo;&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>提供替代方案：&lt;br>
+用技术手段实现相同用户价值但成本更低的方案&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://cdn.nlark.com/yuque/0/2025/png/473179/1740067617658-4684af3c-2d4d-408a-9c87-d978426ca9e8.png" alt="">&lt;/p>
+&lt;h3 id="四构建用户同理心系统">四、构建用户同理心系统&lt;/h3>
+&lt;ol>
+&lt;li>建立用户观察机制&lt;/li>
+&lt;/ol>
+&lt;ul>
+&lt;li>每周抽听10条用户反馈录音&lt;/li>
+&lt;li>参与至少1次用户访谈，注意观察非语言信息&lt;/li>
+&lt;li>分析客服工单中的高频问题模式&lt;/li>
+&lt;/ul>
+&lt;ol start="2">
+&lt;li>技术驱动的用户洞察&lt;/li>
+&lt;/ol>
+&lt;ul>
+&lt;li>用聚类算法分析用户行为数据&lt;/li>
+&lt;li>通过日志分析绘制用户真实使用路径&lt;/li>
+&lt;li>构建用户分群模型（RFM模型技术实现）&lt;/li>
+&lt;/ul>
+&lt;h3 id="五产品化技术方案">五、产品化技术方案&lt;/h3>
+&lt;ol>
+&lt;li>技术方案说明书升级&lt;/li>
+&lt;/ol>
+&lt;ul>
+&lt;li>增加&amp;quot;商业影响评估&amp;quot;章节&lt;/li>
+&lt;li>绘制技术方案与用户旅程的映射图&lt;/li>
+&lt;li>预估方案对核心指标的影响区间&lt;/li>
+&lt;/ul>
+&lt;ol start="2">
+&lt;li>创建技术产品路线图&lt;/li>
+&lt;/ol>
+&lt;ul>
+&lt;li>将技术债偿还与功能演进结合&lt;/li>
+&lt;li>用产品思维规划中间件迭代&lt;/li>
+&lt;li>建立技术能力的API化产品目录&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://cdn.nlark.com/yuque/0/2025/png/473179/1740067628537-895da785-40f4-4983-ab00-e10168c36d80.png" alt="">&lt;/p>
+&lt;h3 id="六培养商业敏感度">六、培养商业敏感度&lt;/h3>
+&lt;ol>
+&lt;li>财务指标技术解读&lt;/li>
+&lt;/ol>
+&lt;ul>
+&lt;li>理解LTV/CAC在代码层的体现&lt;/li>
+&lt;li>用技术手段优化服务成本结构&lt;/li>
+&lt;li>通过架构设计影响毛利率&lt;/li>
+&lt;/ul>
+&lt;ol start="2">
+&lt;li>竞品技术分析&lt;/li>
+&lt;/ol>
+&lt;ul>
+&lt;li>逆向工程竞品关键功能的实现方案&lt;/li>
+&lt;li>绘制竞品技术演进路线&lt;/li>
+&lt;li>分析技术选择与商业策略的关联&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://cdn.nlark.com/yuque/0/2025/png/473179/1740067979760-5422e6f7-755e-4451-a776-dd2d429df932.png" alt="">&lt;/p>
+&lt;h3 id="七持续学习机制">七、持续学习机制&lt;/h3>
+&lt;ol>
+&lt;li>建立产品信息源矩阵&lt;/li>
+&lt;/ol>
+&lt;ul>
+&lt;li>技术产品经理博客（如硅谷产品组）&lt;/li>
+&lt;li>财报技术分析（重点看AWS、Azure等云服务商）&lt;/li>
+&lt;li>专利分析（通过Google Patents追踪技术产品化趋势）&lt;/li>
+&lt;/ul>
+&lt;ol start="2">
+&lt;li>实践产品创新沙盘&lt;/li>
+&lt;/ol>
+&lt;ul>
+&lt;li>季度产品黑客松：用现有技术栈设计新产品&lt;/li>
+&lt;li>技术方案路演：向非技术人员解释技术价值&lt;/li>
+&lt;li>构建MVP验证平台：快速原型测试工具链&lt;/li>
+&lt;/ul>
+&lt;h3 id="关键执行策略">关键执行策略：&lt;/h3>
+&lt;ol>
+&lt;li>每周做一次「产品视角」代码审查：&lt;/li>
+&lt;/ol>
+&lt;ul>
+&lt;li>检查自己写的代码是否考虑了扩展场景&lt;/li>
+&lt;li>验证埋点是否覆盖关键转化路径&lt;/li>
+&lt;li>评估异常处理是否影响用户体验&lt;/li>
+&lt;/ul>
+&lt;ol start="2">
+&lt;li>建立技术产品化看板：&lt;/li>
+&lt;/ol>
+&lt;ul>
+&lt;li>将技术需求与产品目标对齐&lt;/li>
+&lt;li>可视化技术投入的商业回报&lt;/li>
+&lt;li>追踪技术决策对核心指标的影响&lt;/li>
+&lt;/ul>
+&lt;p>通过这种结构化训练，程序员可以在6-12个月内实现产品思维的质变，不仅能准确理解产品需求，更能从技术角度主动驱动产品创新，成为&amp;quot;技术产品人&amp;quot;的复合型人才。记住，优秀的产品思维不是否定技术深度，而是让技术的产品思维不是否定技术深度，而是让技术价值获得更有效的商业表达。&lt;/p></description></item></channel></rss>
