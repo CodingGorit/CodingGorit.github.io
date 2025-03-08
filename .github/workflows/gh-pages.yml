@@ -4,27 +4,53 @@ on:
   push:
     branches:
       - main  # 触发部署的分支
+    paths:
+      - 'content/**'   # 内容文件变动时触发
+      - 'layouts/**'   # 模板文件变动时触发
+      - 'static/**'    # 静态资源变动时触发
+      - 'config.toml'  # 配置文件变动时触发
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     permissions:
       contents: write  # 确保有写入权限
+      pages: write      # 专门针对 GitHub Pages 的权限
+      id-token: read    # OIDC 令牌读取权限（未来兼容）
     steps:
+      # --------------------------
+      # 1. 检出代码（含子模块）
+      # --------------------------
       - name: Checkout code
         uses: actions/checkout@v3
 
+      # --------------------------
+      # 2. 配置 Hugo 环境
+      # --------------------------
       - name: Set up Hugo
         uses: peaceiris/actions-hugo@v2
         with:
           hugo-version: 'latest'  # 使用最新版本
           extended: true          # 如果使用扩展版本，设置为 true
 
-      - name: Build
-        run: hugo --minify
+      # --------------------------
+      # 3. 构建静态站点（带清理）
+      # --------------------------
+      - name: Build with Hugo
+        run: |
+          hugo \
+            --minify \           # 压缩 HTML/CSS/JS
+            --cleanDestinationDir \  # 清理旧文件
+            --gc              # 移除未用缓存
 
+      # --------------------------
+      # 4. 部署到 GitHub Pages
+      # --------------------------
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}  # 使用 GITHUB_TOKEN
           publish_dir: ./public
+          enable_jekyll: false   # 禁用 Jekyll 处理
+          keep_files: false      # 不保留旧文件
+          commit_message: "Hugo Deployed: ${{ github.sha }}"
